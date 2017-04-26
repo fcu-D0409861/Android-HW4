@@ -11,12 +11,15 @@ import android.widget.EditText;
 public class MainActivity extends ActionBarActivity {
 
     EditText et_msg;
-
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btn = (Button)findViewById(R.id.btn_notification);
+
+        //要習慣對物件 findViewById
+        btn = (Button)findViewById(R.id.btn_notification);
+        et_msg = (EditText)findViewById(R.id.editText);
         btn.setOnClickListener(rec_notification);
 
     }
